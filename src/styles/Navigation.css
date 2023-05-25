@@ -1,0 +1,36 @@
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 0.3rem;
+  background-color: #4369b2;
+}
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-icons {
+  font-size: 1.4rem;
+  color: #fafafa;
+}
+
+.header-menu {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.header-title {
+  width: 100%;
+}
+
+.header-title h5 {
+  text-align: center;
+  color: #f0ebeb;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
