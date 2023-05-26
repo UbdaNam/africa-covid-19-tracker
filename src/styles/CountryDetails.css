@@ -1,0 +1,28 @@
+.details-container h4 {
+  width: 100%;
+  background-color: #35548b;
+  padding: calc(min(0.3rem, 2vw)) 0.8rem;
+  color: #fafafa;
+  font-size: calc(min(1rem, 6vw));
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  margin-top: 70px;
+  padding: 0.3rem;
+  border-radius: 7px;
+  background-color: #f03131;
+  color: #fafafa;
+  font-size: 14px;
+}
+
+.loading {
+  margin-top: 70px;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+}

@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import CountryList from "./components/CountryList";
+import CounteryDetails from "./components/CountryDetails";
+
 function App() {
   return (
     <Routes>
       <Route path="/" element={<CountryList />} />
-      <Route path="/id" element={<h1>ID</h1>} />
+      <Route path="/:countryName" element={<CounteryDetails />} />
     </Routes>
   );
 }

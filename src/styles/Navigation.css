@@ -7,6 +7,8 @@ header {
   width: 100%;
   padding: 0.8rem 0.3rem;
   background-color: #4369b2;
+  z-index: 3;
+  height: 56.8px;
 }
 .back-button {
   display: flex;

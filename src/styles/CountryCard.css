@@ -1,0 +1,42 @@
+.country-card:nth-child(2n + 1) {
+  grid-column: 1;
+}
+
+.country-card {
+  position: relative;
+}
+
+.country-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.forward-icon {
+  top: 3%;
+  right: 3%;
+  color: #fafafa;
+}
+.overlay-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(19, 27, 66, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+  padding: 3%;
+}
+
+.country-card:nth-child(4n + 3) .overlay-container,
+.country-card:nth-child(4n + 2) .overlay-container {
+  background-color: rgba(121, 11, 64, 0.276);
+}
+
+.overlay-container h3 {
+  font-size: calc(min(1.1rem, 4.5vw));
+  color: #fafafa;
+}

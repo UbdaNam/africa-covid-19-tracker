@@ -8,6 +8,7 @@ import Navigation from "./Navigation";
 import { useSelector } from "react-redux";
 import "../styles/CountryList.css";
 import CountryCard from "./CountryCard";
+import TopBar from "./TopBar";
 
 export default function CountryList() {
   const dispatch = useDispatch();
@@ -15,30 +16,25 @@ export default function CountryList() {
   useEffect(() => {
     dispatch(fetchCountries());
   }, []);
-  console.log(countries, isLoading, error);
   return (
     <>
       <Navigation>
         <h2 className="header-year-text">2015</h2>
         <div className="header-title">
-          <h5>Africa countries</h5>
+          <h5>African countries</h5>
         </div>
       </Navigation>
       <div className="main-wrapper">
-        <div className="contenent-wrapper">
-          <div className="img-container">
-            <img src="/assets/Updated-structure.png" alt="Africa map" />
-          </div>
-          <div className="content">
-            <h3>Africa</h3>
-            <p>population: 123,343,342</p>
-          </div>
-        </div>
+        <TopBar
+          src="/assets/Updated-structure.png"
+          title="Africa"
+          population="1,406,728,744"
+        />
         <h4>STATS BY COUNTRY</h4>
         <div className="countries-container">
-          {countries.map((country) => {
-            <CountryCard />;
-          })}
+          {countries.map(({ flags, name }) => (
+            <CountryCard key={name.common} flags={flags} name={name} />
+          ))}
         </div>
       </div>
     </>
