@@ -1,5 +1,3 @@
-# African COVID-19 Tracker
-
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
