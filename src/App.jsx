@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom";
-import CountryList from "./components/CountryList";
-import CounteryDetails from "./components/CountryDetails";
+import { Routes, Route } from 'react-router-dom';
+import CountryList from './components/CountryList';
+import CounteryDetails from './components/CountryDetails';
 
 function App() {
   return (

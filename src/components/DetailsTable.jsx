@@ -1,4 +1,5 @@
-import "../styles/DetailsTable.css";
+import '../styles/DetailsTable.css';
+import PropTypes from 'prop-types';
 
 export default function DetailsTable({ countryDetail }) {
   return (
@@ -38,3 +39,15 @@ export default function DetailsTable({ countryDetail }) {
     </>
   );
 }
+
+DetailsTable.propTypes = {
+  countryDetail: PropTypes.shape({
+    population: PropTypes.number.isRequired,
+    cases: PropTypes.number.isRequired,
+    active: PropTypes.number.isRequired,
+    critical: PropTypes.number.isRequired,
+    recovered: PropTypes.number.isRequired,
+    deaths: PropTypes.number.isRequired,
+    tests: PropTypes.number.isRequired,
+  }).isRequired,
+};

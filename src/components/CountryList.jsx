@@ -1,25 +1,23 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   countriesSelector,
   fetchCountries,
-} from "../redux/countries/countriesSlice";
-import Navigation from "./Navigation";
-import { useSelector } from "react-redux";
-import "../styles/CountryList.css";
-import CountryCard from "./CountryCard";
-import TopBar from "./TopBar";
+} from '../redux/countries/countriesSlice';
+import Navigation from './Navigation';
+import '../styles/CountryList.css';
+import CountryCard from './CountryCard';
+import TopBar from './TopBar';
 
 export default function CountryList() {
   const dispatch = useDispatch();
-  const { countries, isLoading, error } = useSelector(countriesSelector);
+  const { countries } = useSelector(countriesSelector);
   useEffect(() => {
     dispatch(fetchCountries());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Navigation>
-        <h2 className="header-year-text">2015</h2>
         <div className="header-title">
           <h5>African countries</h5>
         </div>

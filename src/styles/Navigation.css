@@ -10,11 +10,13 @@ header {
   z-index: 3;
   height: 56.8px;
 }
+
 .back-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .header-icons {
   font-size: 1.4rem;
   color: #fafafa;

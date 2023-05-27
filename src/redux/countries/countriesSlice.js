@@ -1,45 +1,43 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const baseURL =
-  "https://restcountries.com/v3.1/region/africa?fields=name,flags";
+const baseURL = 'https://restcountries.com/v3.1/region/africa?fields=name,flags';
 const initialState = {
   countries: [],
   isLoading: false,
-  error: "",
+  error: '',
 };
 
 export const fetchCountries = createAsyncThunk(
-  "countries/fetchCountries",
+  'countries/fetchCountries',
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(baseURL);
       if (!response.ok) {
-        rejectWithValue(response.statusText || "Something went wrong");
+        return rejectWithValue(response.statusText || 'Something went wrong');
       }
       const responseJSON = await response.json();
-      const data = responseJSON.sort((a, b) =>
-        a.name.common.localeCompare(b.name.common)
-      );
+      const data = responseJSON.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
       return data;
     } catch (err) {
-      rejectWithValue(err.message || "Something went wrong");
+      return rejectWithValue(err.message || 'Something went wrong');
     }
-  }
+  },
 );
 const countriesSlice = createSlice({
-  name: "countries",
+  name: 'countries',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchCountries.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.error = "";
+        state.error = '';
         state.countries = payload;
       })
       .addCase(fetchCountries.pending, (state) => {
         state.isLoading = true;
-        state.error = "";
+        state.error = '';
       })
       .addCase(fetchCountries.rejected, (state, { payload }) => {
         state.isLoading = false;

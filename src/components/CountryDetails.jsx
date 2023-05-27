@@ -1,14 +1,14 @@
-import { useParams } from "react-router-dom";
-import Navigation from "./Navigation";
-import TopBar from "./TopBar";
-import { useDispatch, useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Navigation from './Navigation';
+import TopBar from './TopBar';
 import {
   detailsSelector,
   fetchCountryDetails,
-} from "../redux/details/detailsSlice";
-import { useEffect } from "react";
-import "../styles/CountryDetails.css";
-import DetailsTable from "./DetailsTable";
+} from '../redux/details/detailsSlice';
+import '../styles/CountryDetails.css';
+import DetailsTable from './DetailsTable';
 
 export default function CountryDetails() {
   const params = useParams();
@@ -19,7 +19,7 @@ export default function CountryDetails() {
 
   useEffect(() => {
     dispatch(fetchCountryDetails(countryName));
-  }, [countryName]);
+  }, [countryName, dispatch]);
   return (
     <>
       <div className="details-container">
@@ -36,7 +36,10 @@ export default function CountryDetails() {
               title={countryDetails?.country}
               population={countryDetails?.population?.toLocaleString()}
             />
-            <h4>{countryName.toUpperCase()}: COVID-19 current stats</h4>
+            <h4>
+              {countryName.toUpperCase()}
+              : COVID-19 current stats
+            </h4>
             <DetailsTable countryDetail={countryDetails} />
           </>
         )}

@@ -1,4 +1,5 @@
-import "../styles/TopBar.css";
+import '../styles/TopBar.css';
+import PropTypes from 'prop-types';
 
 export default function TopBar({ src, title, population }) {
   return (
@@ -8,8 +9,17 @@ export default function TopBar({ src, title, population }) {
       </div>
       <div className="content">
         <h2>{title}</h2>
-        <p>population: {population}</p>
+        <p>
+          population:
+          {population}
+        </p>
       </div>
     </div>
   );
 }
+
+TopBar.propTypes = {
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  population: PropTypes.string.isRequired,
+};

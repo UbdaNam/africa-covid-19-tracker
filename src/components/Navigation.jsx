@@ -1,9 +1,10 @@
-import { MdArrowBackIosNew, MdKeyboardVoice } from "react-icons/md";
-import { GoGear } from "react-icons/go";
-import "../styles/Navigation.css";
-import { useNavigate } from "react-router-dom";
+import { MdArrowBackIosNew, MdKeyboardVoice } from 'react-icons/md';
+import { GoGear } from 'react-icons/go';
+import '../styles/Navigation.css';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export default function Navigation(props) {
+export default function Navigation({ children }) {
   const navigate = useNavigate();
   return (
     <header>
@@ -13,7 +14,7 @@ export default function Navigation(props) {
           className="header-icons"
         />
       </div>
-      {props.children}
+      {children}
       <div className="header-menu">
         <MdKeyboardVoice className="header-icons" />
         <GoGear className="header-icons" />
@@ -21,3 +22,10 @@ export default function Navigation(props) {
     </header>
   );
 }
+
+Navigation.defaultProps = {
+  children: <></>,
+};
+Navigation.propTypes = {
+  children: PropTypes.node,
+};

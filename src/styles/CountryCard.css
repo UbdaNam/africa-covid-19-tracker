@@ -1,9 +1,9 @@
-.country-card:nth-child(2n + 1) {
-  grid-column: 1;
-}
-
 .country-card {
   position: relative;
+}
+
+.country-card:nth-child(2n + 1) {
+  grid-column: 1;
 }
 
 .country-card img {
@@ -16,6 +16,7 @@
   right: 3%;
   color: #fafafa;
 }
+
 .overlay-container {
   position: absolute;
   top: 0;

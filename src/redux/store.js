@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import countriesReducer from "./countries/countriesSlice";
-import detailsReducer from "./details/detailsSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import countriesReducer from './countries/countriesSlice';
+import detailsReducer from './details/detailsSlice';
 
 const store = configureStore({
   reducer: {
