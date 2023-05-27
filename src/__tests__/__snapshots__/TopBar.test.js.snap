@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Top bar component render correctly Check if top bar renders correctly 1`] = `
+<div
+  className="content-wrapper"
+>
+  <div
+    className="img-container"
+  >
+    <img
+      alt="Ethiopia"
+      src="https://disease.sh/assets/img/flags/et.png"
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <h2>
+      Ethiopia
+    </h2>
+    <p>
+      population:
+      23458262
+    </p>
+  </div>
+</div>
+`;

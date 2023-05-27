@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country table component render correctly Check if country table renders correctly 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td>
+        Population
+      </td>
+      <td>
+        15,243,234
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Cases
+      </td>
+      <td>
+        458,234
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Active
+      </td>
+      <td>
+        2,423
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Critical
+      </td>
+      <td>
+        5
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Recovered
+      </td>
+      <td>
+        234,552
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Deaths
+      </td>
+      <td>
+        98
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Tests
+      </td>
+      <td>
+        9,834,573
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

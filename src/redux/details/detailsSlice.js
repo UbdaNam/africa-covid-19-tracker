@@ -19,6 +19,7 @@ export const fetchCountryDetails = createAsyncThunk(
         );
       }
       const responseJSON = await response.json();
+
       return responseJSON;
     } catch (err) {
       return rejectWithValue(err.message || 'Something went wrong');
