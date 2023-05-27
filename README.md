@@ -51,7 +51,7 @@ This project aims to provide up-to-date information about the COVID-19 pandemic 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://africa-covid-19-tracker.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
