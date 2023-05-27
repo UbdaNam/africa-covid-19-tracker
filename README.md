@@ -14,6 +14,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+  - [Test](#test)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -52,6 +53,14 @@ This project aims to provide up-to-date information about the COVID-19 pandemic 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://africa-covid-19-tracker.onrender.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video description <a name="video-description"></a>
+
+- Below is a link to a video that I recorded to walk you through why I did this project and what I learned from doing it.
+
+- [Video Description link](https://www.loom.com/share/6e18f25fff17448ab0661850007c4a32)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
