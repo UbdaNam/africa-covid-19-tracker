@@ -7,6 +7,11 @@ const initialState = {
   error: '',
 };
 
+export const sortByName = (arr) => {
+  arr.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  return arr;
+};
+
 export const fetchCountries = createAsyncThunk(
   'countries/fetchCountries',
   async (_, { rejectWithValue }) => {
@@ -16,7 +21,7 @@ export const fetchCountries = createAsyncThunk(
         return rejectWithValue(response.statusText || 'Something went wrong');
       }
       const responseJSON = await response.json();
-      const data = responseJSON.sort((a, b) => a.name.common.localeCompare(b.name.common));
+      const data = sortByName(responseJSON);
 
       return data;
     } catch (err) {
