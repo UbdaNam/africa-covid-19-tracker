@@ -1,0 +1,25 @@
+table {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #4269b0;
+}
+
+table tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  width: 100%;
+  background-color: #4269b0;
+  padding: 1.5rem 0.7rem;
+  color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #3e62a4;
+}
+
+table tr td:nth-child(2) {
+  text-align: end;
+}

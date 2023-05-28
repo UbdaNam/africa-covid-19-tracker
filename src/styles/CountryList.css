@@ -1,0 +1,12 @@
+.main-wrapper h4 {
+  width: 100%;
+  background-color: #35548b;
+  padding: calc(min(0.3rem, 2vw)) 0.8rem;
+  color: #fafafa;
+  font-size: calc(min(1rem, 6vw));
+}
+
+.countries-container {
+  display: grid;
+  grid-auto-flow: column;
+}
