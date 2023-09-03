@@ -23,3 +23,15 @@ table tr:nth-child(2n) {
 table tr td:nth-child(2) {
   text-align: end;
 }
+
+@media screen and (min-width: 768px) {
+  table tr td:nth-child(2) {
+    text-align: center;
+    width: 50%;
+  }
+
+  table tr td:nth-child(1) {
+    text-align: center;
+    width: 50%;
+  }
+}
